@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-------Task1------->
+    <pre>Task1. Есть поля ввода. Необходимо, чтобы при потери фокуса input, добавлялась проверка своего содержимого на правильное количество символов. Количество символов (правильное), указывается в атрибуте data-length. Если записано правильное количество, то граница инпута становится зеленой, если неправильное - красной, и ниже выводится сообщение "Неправильное количество символов. Необходимо ввести 3 символа".
+  </pre>
+
+    <form id="form1">
+        <div>
+            <input type="text" name="input1" data-length="5">
+        </div>
+        <div>
+            <input type="text" name="input2" data-length="6">
+        </div>
+        <div>
+            <input type="text" name="input3" data-length="3">
+        </div>
+    </form>
+
+
+    <!-------Task2------->
+    <pre>
+        Task2. Дан массив. Вам необходимо отрисовать меню. Создайте ul через createElement, затем вставьте каждый элемент этого массива в отдельную li внутри этой ul. Если внутри элемента массива, есть еще массив, создавайте новый ul и отрисовывайте подменю.
+    </pre>
+
+    <ul class="menu">
+        <li>
+            <a href="#">Link1</a>
+            <ul class="sub-menu">
+                <li><a href="#">Link1.1</a></li>
+                <li><a href="#">Link1.2</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Link2</a></li>
+        <li>
+            <a href="#">Link3</a>
+            <ul class="sub-menu">
+                <li><a href="#">Link3.1</a></li>
+                <li><a href="#">Link3.2</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!--  <div class="new-menu">
+        
+    </div> -->
+
+
+    <!-------Task3------->
+    <pre>
+        Task3.  Дано поле ввода(input). Когда пользователь вводит текст, и нажимает клавишу Enter (код Enter 13), нужно сделать чтобы введенный текст выводился в новый тег "p" под input, а содержимое input очищалось.
+    </pre>
+
+    <div id="new-input">
+        <input type="text" name="input-info" data-length="3">
+    </div>
+
+
+
+    <!-------Task4------->
+
+    <pre>
+        Task4. Дана таблица с юзерами с двумя колонками: имя и фамилия. Под таблицей сделайте форму, с помощью которой можно будет добавить нового юзера в таблицу. Сделайте так, чтобы при клике на любую ячейку появлялся prompt, с помощью которого можно изменить текст ячейки. Задачу решите с помощью делегирования (то есть событие должно быть навешано на table).
+    </pre>
+
+
+    <table border=1 id="users">
+        <col style="width: 200px;">
+        <col style="width: 200px;">
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+        </tr>
+        <tr>
+            <td>Максим</td>
+            <td>Иванов</td>
+        </tr>
+        <tr>
+            <td>Иван</td>
+            <td>Максименко</td>
+        </tr>
+    </table>
+
+    <form id="user">
+        <input type="text" placeholder="Name" name="fName">
+        <input type="text" placeholder="Last Name" name="lName">
+
+        <input type="submit" value="Add User">
+    </form>
+
+
+    <!-------Task5------->
+    <pre>
+        Task5. Дан ul, в нем несколько li. Под ul сделайте кнопку,
+        по нажатию на которую в конец ul будет добавляться новый li с текстом 'пункт'.
+         Сделайте так, чтобы при клике на каждый li, ему в конец добавлялся '!'.
+          Это должно работать и для вновь добавленных li. 
+          Задачу решите с помощью делегирования (то есть событие должно быть навешано на ul).
+    </pre>
+
+
+    <ul id="menuList">
+        <li>пункт 1</li>
+        <li>пункт 2</li>
+        <li>пункт 3</li>
+    </ul>
+
+    <button id="btnAdd">Добавить li</button>
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
