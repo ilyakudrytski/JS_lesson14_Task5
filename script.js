@@ -191,12 +191,13 @@ button.addEventListener('click', function() {
     list.appendChild(newLi);
 })
 
-list.addEventListener('click', function(event) {
+list.addEventListener('click', addExclamation)
+
+function addExclamation(event) {
     var currentLI = event.target;
-
-    if (currentLI.tagName === 'LI') {
-
+    if (currentLI.tagName === 'LI' && currentLI.innerText.indexOf('!') === -1) {
         currentLI.innerText += '!'
-
+        currentLI.removeEventListener('click', addExclamation);
     }
-}, )
+
+}
